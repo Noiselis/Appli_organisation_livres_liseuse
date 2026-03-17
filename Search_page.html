@@ -1,0 +1,328 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!--<link rel="shortcut icon" type="image/x-icon" href="images/favicon_doudou.png" />-->
+    <title>Interface application début 1 page Search work</title>
+    <link href="css/interfaceCSS1.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="outer" class="wrapper">
+      <div id="header" class="region">
+        <h1 class="heading">
+          <a>
+            <span></span>
+            <sup></sup>
+            <img>
+          </a>
+        </h1>
+        <div id="landmark heading"></div>
+
+        <ul class="primary navigation actions">
+          <li class="dropdown">
+            <a class="dropdown-toggle">Menu</a>
+            <ul class="menu dropdown-menu">
+              <li id="Advanced_search">
+                <a href="./Search_page.html">Advanced search</a>
+              </li>
+              <li id="About">
+                <a>About this app</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    
+
+
+
+
+      <div id="inner" class="wrapper">
+          <div id="main" class="dashboard region">
+
+            <form class="verbose search">
+                <fieldset>
+                    <legend>Work Info</legend>
+                    <p class="submit">
+                    <input type="submit" name="commit" value="Search">
+                    </p>
+                    <dl>
+                        <dt>
+                            <label for="work_search_anything">Any field</label>
+                            <a class="help_symbol" title="Work search text help" href="/help/work_search_text_help.html" aria-controls="">
+                            <span class="symbol question">
+                                <span>?</span>
+                            </span>
+                            </a>
+                        </dt>
+                        <dd>
+                            <input type="text" name="work_search_anything_text" id="work_search_anything">
+                        </dd>
+                        <dt>
+                            <label for="work_search_title">Title</label>
+                        </dt>
+                        <dd>
+                            <input type="text" name="work_search_title_text" id="work_search_title">
+                        </dd>
+                        <dt>
+                            <label for="work_search_author">Author</label>
+                        </dt>
+                        <dd>
+                            <input type="text" name="work_search_author_text" id="work_search_author">
+                        </dd>
+                        <dt>
+                            <label for="work_search_date">Date</label>
+                            <a class="help_symbol" title="Work search text help" href="/help/work_search_date_help.html" aria-controls="">
+                            <span class="symbol question">
+                                <span>?</span>
+                            </span>
+                            </a>
+                        </dt>
+                        <dd>
+                            <input type="text" name="work_search_date_text" id="work_search_date">
+                        </dd>
+                        <dt>Completion status</dt>
+                        <dd>
+                            <ul>
+                                <li>
+                                    <input type="radio" value checked="checked" name="work_search_completion_button" id="work_search_all_completion">
+                                    <label for="work_search_all_completion">All works</label>
+                                </li>
+                                <li>
+                                    <input type="radio" value="complete" name="work_search_completion_button" id="work_search_complete">
+                                    <label for="work_search_complete">Complete works only</label>
+                                </li>
+                                <li>
+                                    <input type="radio" value="unfinished" name="work_search_completion_button" id="work_search_unfinished">
+                                    <label for="work_search_unfinished">Works in progress only</label>
+                                </li>
+                            </ul>
+                        </dd>
+                        <dt>Length</dt>
+                        <dd>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" value="very_short" name="work_search_very_short_checkbox" id="work_search_very_short">
+                                    <label for="work_search_very_short">Very short works (less than 2 000 words)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" value="short" name="work_search_short_checkbox" id="work_search_short">
+                                    <label for="work_search_short">Short works (between 2 000 and 10 000 words)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" value="medium" name="work_search_medium_checkbox" id="work_search_medium">
+                                    <label for="work_search_medium">Medium length works (between 10 000 and  words)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" value="long" name="work_search_long_checkbox" id="work_search_long">
+                                    <label for="work_search_long">Long works (between  and  words)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" value="very_long" name="work_search_very_long_checkbox" id="work_search_very_long">
+                                    <label for="work_search_very_long">Very long works (over  words)</label>
+                                </li>
+                            </ul>
+                        </dd>
+                        <dt>
+                            <label for="work_search_language">Language</label>
+                        </dt>
+                        <dd>
+                            <select name="work_search_language_dropdown_menu" id="work_search_language">
+                                <option value label=" "></option>
+                                <option lang="en" value="en">English</option>
+                                <option lang="fr" value="fr">Français</option>
+                            </select>
+                        </dd>
+                    </dl>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Work tags</legend>
+                    <dl>
+                        <dt>
+                            <label for="work_search_fandoms">Fandoms</label>
+                        </dt>
+                        <dd>
+                            <ul class="autocomplete">
+                                <li class="input">
+                                    <input type="text" class="text" autocomplete="off" role="combobox" aria-expanded="true" aria-autocomplete="list" id="work_search_fandoms">
+                                    <div class="autocomplete dropdown" style="display: none;"></div>
+                                </li>
+                            </ul>
+                            <input class="autocomplete" data-autocomplete-method="/autocomplete/fandom" data-autocomplete-hint-text="Start typing for suggestion !" data-autocomplete-no-results-text="(No suggestions found)" data-autocomplete-min-chars="1" data-autocomplete-searching-text="Searching..." type="text" name="work_search_fandoms_dropdown" id="work_search_fandoms" style="display: none;">
+                            
+                        </dd>
+                        <dt>
+                            <label for="work_search_rating">Rating</label>
+                        </dt>
+                        <dd>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" name="work_search_rating_checkbox" id="not_rated" value="not_rated">
+                                    <label for="not_rated">Not rated</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="work_search_rating_checkbox" id="general" value="general">
+                                    <label for="general">General audiences</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="work_search_rating_checkbox" id="teen" value="teen">
+                                    <label for="teen">Teen and up audiences</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="work_search_rating_checkbox" id="mature" value="mature">
+                                    <label for="mature">Mature</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="work_search_rating_checkbox" id="explicit" value="explicit">
+                                    <label for="explicit">Explicit</label>
+                                </li>
+                            </ul>
+                        </dd>
+                        <dt>Warnings</dt>
+                        <dd>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" name="work_search_warnings_checkbox" id="author_chose_no_warning" value="author_chose_no_warning">
+                                    <label for="author_chose_no_warning">Creator Chose Not To Use Archive Warnings</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="work_search_warnings_checkbox" id="violence" value="violence">
+                                    <label for="violence">Graphic Depictions Of Violence</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="work_search_warnings_checkbox" id="death" value="death">
+                                    <label for="death">Major Character Death</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="work_search_warnings_checkbox" id="no_warning" value="no_warning">
+                                    <label for="no_warning">No Archive Warnings Apply</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="work_search_warnings_checkbox" id="rape" value="rape">
+                                    <label for="rape">Rape/Non-Con</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="work_search_warnings_checkbox" id="underage" value="underage">
+                                    <label for="underage">Underage Sex</label>
+                                </li>
+                            </ul>
+                        </dd>
+                        <dt>Categories</dt>
+                        <dd>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" name="work_search_warnings_checkbox" id="FF" value="FF">
+                                    <label for="FF">F/F</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="work_search_warnings_checkbox" id="FM" value="FM">
+                                    <label for="FM">F/M</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="work_search_warnings_checkbox" id="gen" value="gen">
+                                    <label for="gen">Gen</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="work_search_warnings_checkbox" id="MM" value="MM">
+                                    <label for="MM">M/M</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="work_search_warnings_checkbox" id="multi" value="multi">
+                                    <label for="multi">Multi</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="work_search_warnings_checkbox" id="other" value="other">
+                                    <label for="other">Other</label>
+                                </li>
+                            </ul>
+                        </dd>
+                        <dt>
+                            <label for="work_search_characters">Characters</label>
+                        </dt>
+                        <dd>
+                            <ul class="autocomplete">
+                                <li class="input">
+                                    <input type="text" class="text" autocomplete="off" role="combobox" aria-expanded="true" aria-autocomplete="list" id="work_search_characters">
+                                    <div class="autocomplete dropdown" style="display: none;"></div>
+                                </li>
+                            </ul>
+                            <input class="autocomplete" data-autocomplete-method="/autocomplete/character" data-autocomplete-hint-text="Start typing for suggestion !" data-autocomplete-no-results-text="(No suggestions found)" data-autocomplete-min-chars="1" data-autocomplete-searching-text="Searching..." type="text" name="work_search_characters_dropdown" id="work_search_characters" style="display: none;">
+                        </dd>
+                        <dt>
+                            <label for="work_search_relationships">Relationships</label>
+                        </dt>
+                        <dd>
+                            <ul class="autocomplete">
+                                <li class="input">
+                                    <input type="text" class="text" autocomplete="off" role="combobox" aria-expanded="true" aria-autocomplete="list" id="work_search_relationships">
+                                    <div class="autocomplete dropdown" style="display: none;"></div>
+                                </li>
+                            </ul>
+                            <input class="autocomplete" data-autocomplete-method="/autocomplete/relationship" data-autocomplete-hint-text="Start typing for suggestion !" data-autocomplete-no-results-text="(No suggestions found)" data-autocomplete-min-chars="1" data-autocomplete-searching-text="Searching..." type="text" name="work_search_relationships_dropdown" id="work_search_relationships" style="display: none;">
+                        </dd>
+                        <dt>
+                            <label for="work_search_additional_tags">Additional tags</label>
+                        </dt>
+                        <dd>
+                            <ul class="autocomplete">
+                                <li class="input">
+                                    <input type="text" class="text" autocomplete="off" role="combobox" aria-expanded="true" aria-autocomplete="list" id="work_search_additional_tags">
+                                    <div class="autocomplete dropdown" style="display: none;"></div>
+                                </li>
+                            </ul>
+                            <input class="autocomplete" data-autocomplete-method="/autocomplete/additional_tag" data-autocomplete-hint-text="Start typing for suggestion !" data-autocomplete-no-results-text="(No suggestions found)" data-autocomplete-min-chars="1" data-autocomplete-searching-text="Searching..." type="text" name="work_search_additional_tags_dropdown" id="work_search_additional_tags" style="display: none;">
+                        </dd>
+                    </dl>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Search</legend>
+                    <dl>
+                        <dt>
+                            <label for="work_search_sorting">Sort by</label>
+                        </dt>
+                        <dd>
+                            <select name="work_search_sorting_dropdown_menu" id="work_search_sorting">
+                                <option selected="selected" value="best_match_sorting">Best match</option>
+                                <option value="author_sorting">Author</option>
+                                <option value="title_sorting">Title</option>
+                                <option value="date_posted_sorting">Date posted</option>
+                                <option value="date_updated_sorting">Date updated</option>
+                                <option value="word_count_sorting">Word count</option>
+                            </select>
+                        </dd>
+                        
+                        <dt>
+                            <label for="work_search_direction">Sort direction</label>
+                        </dt>
+                        <dd>
+                            <select name="work_search_direction_dropdown_menu" id="work_search_direction">
+                                <option selected="selected" value="descending">Descending</option>
+                                <option value="ascending">Ascending</option>
+                            </select>
+                        </dd>
+
+                    </dl>
+                    <p class="submit">
+                    <input type="submit" name="commit" value="Search">
+                    </p>
+                </fieldset>
+
+
+                
+              
+            </form>
+
+          </div>
+      </div>
+
+
+
+
+      <div id="footer" class="region"></div>
+    </div>
+  </body>
+</html>
