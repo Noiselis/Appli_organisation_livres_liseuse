@@ -1,0 +1,38 @@
+
+#for_background_color{
+    width: 10cm;
+    height: 16cm;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 10% 1fr 30%;
+    grid-gap: 2% 4%;
+    /* background-color: #b4eef6; */
+    background-color: black;
+    padding: 1%;
+    border-radius: 20px;
+}
+
+/*////////////////////////////////////////////////*/
+
+#accueil{
+    background-color: #467FD7;
+    grid-row: 1;
+    grid-column: span 2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
