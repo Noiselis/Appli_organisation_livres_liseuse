@@ -1,0 +1,61 @@
+
+
+
+
+#in-ex_clude{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+}
+
+
+.include_AND{
+    grid-column: 1;
+}
+.include_OR{
+    grid-column: 2;
+}
+.exclude_AND{
+    grid-column: 3;
+}
+.exclude_OR{
+    grid-column: 4;
+}
+
+
+.include_AND li{
+    margin-right: 0.5em;
+}
+.include_OR li{
+    margin-left: -3em;
+    /* margin-left: 1em; */
+}
+.exclude_AND li{
+    margin-left: -3em;
+    /* margin-left: 1em; */
+}
+.exclude_OR li{
+    margin-left: -3em;
+    /* margin-left: 1em; */
+}
+
+#include_AND{
+    text-align: center;
+}
+#include_OR{
+    text-align: center;
+}
+#exclude_AND{
+    text-align: center;
+}
+#exclude_OR{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
