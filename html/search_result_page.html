@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!--<link rel="shortcut icon" type="image/x-icon" href="images/favicon_doudou.png" />-->
+    <title>Interface application début 1 page Search work</title>
+    <!--<link href="../css/01-core.css" rel="stylesheet">
+    <link href="../css/02-elements.css" rel="stylesheet">
+    <link href="../css/03-region-header.css" rel="stylesheet">
+    <link href="../css/05-region-main.css" rel="stylesheet">-->
+    <!-- <link href="../css/07-interactions.css" rel="stylesheet"> -->
+    <!--<link href="../css/08-actions.css" rel="stylesheet">
+    <link href="../css/09-roles-states.css" rel="stylesheet">
+    <link href="../css/10-types-groups.css" rel="stylesheet">
+    <link href="../css/11-group-listbox.css" rel="stylesheet">
+    <link href="../css/12-group-meta.css" rel="stylesheet">
+    <link href="../css/13-group-blurb.css" rel="stylesheet">
+    <link href="../css/14-group-preface.css" rel="stylesheet">
+    <link href="../css/16-zone-system.css" rel="stylesheet">
+    <link href="../css/17-zone-home.css" rel="stylesheet">
+    <link href="../css/18-zone-searchbrowse.css" rel="stylesheet">
+    <link href="../css/19-zone-tags.css" rel="stylesheet">-->
+    <link href="../css/25-media-midsize.css" rel="stylesheet">
+    <!-- <link href="../css/26-media-narrow.css" rel="stylesheet"> -->
+    
+  </head>
+  <body>
+    <div id="outer" class="wrapper">
+      <div id="header" class="region">
+        <h1 class="heading">
+          <a>
+            <span></span>
+            <sup>alpha</sup>
+            <img>
+          </a>
+        </h1>
+        <div id="landmark heading"></div>
+
+        <ul class="primary navigation actions">
+          <li class="dropdown">
+            <a class="dropdown-toggle">Menu</a>
+            <ul class="menu dropdown-menu">
+              <li id="Advanced_search">
+                <a href="./Search_page.html">Advanced search</a>
+              </li>
+              <li id="About">
+                <a>About this app</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    
+
+      <div id="inner" class="wrapper">
+          <div id="main" class="work_result-region">
+
+            <h2 class="heading">Search results</h2>
+            <h4 class="heading">Sort by: Best match</h4>
+
+            <ul class="navigation_action" role="navigation">
+                <button><a href=".search_page/work_search_anything.value=stuff">Edit your search</a></button>
+            </ul>
+            <h3 class="heading">10523 found</h3>
+
+           <ol class="pagination" role="navigation" aria-label="pagination">
+            <li class="previous_class"><button name="previous_name"><span class="arrow-icon">&#8592 Previous</span></button></li>
+            <li><a href="/tags/TheXFiles/works?page=1" class="current">1</a></li>
+            <li><a href="/tags/TheXFiles/works?page=2">2</a></li>
+            <li class="next_class"><button name="next_name"><a href="tags/TheXFiles/works?page=2" class="arrow-icon">&#8594 Next</a></button></li>
+           </ol>
+
+           <ol class="works_index">
+            <li id="work_24" class="work_blurb" role="article">
+                <div class="header_module">
+                    <h4 class="work_title_and_author">
+                        <a href="">Karma Reservoir</a>
+                         by 
+                        <a href="">Bidule</a> <!--<a> is to find all the works buy this author-->
+                    </h4>
+                    <h5 class="work_fandom">
+                        <a href="tags/TheXFiles"></a> <!--<a> is to find all the works for the same fandom-->
+                    </h5>
+
+                    <ul class="icon_tags">
+                        <li>
+                            <a class="icon_rating" aria-label="symbols_key" href="/help/symbols_key.html">
+                                <span class="general_rating" title="general">
+                                    <span class="text">General</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon_warning" aria-label="symbols_key" href="/help/symbols_key.html">
+                                <span class="no_warning" title="no">
+                                    <span class="text">No Warning</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon_rating" aria-label="symbols_key" href="/help/symbols_key.html">
+                                <span class="het_category" title="het">
+                                    <span class="text">Het</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon_rating" aria-label="symbols_key" href="/help/symbols_key.html">
+                                <span class="not_complete" title="not">
+                                    <span class="text">Not complete</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="datetime">20 Mar 2026</p>
+                </div>
+                <ul class="tags_list">
+                    <li class="warnings">
+                        <strong>
+                            <a class="tags" href="/tags/no_warning/work">No warning</a>
+                        </strong>
+                        ::after
+                    </li>
+                    <li class="relationships">
+                        <a class="tags" href="/tags/GemmaSimmons*s*LeopoldFitz/work">Gemma Simmons/Leopold Fitz</a>
+                        ::after
+                    </li>
+                    <li class="characters">
+                        <a class="tags" href="/tags/GemmaSimmons/work">Gemma Simmons</a>
+                        ::after
+                    </li>
+                    <li class="freeform">
+                        <a class="tags" href="/tags/doing_stuff/work">Doing stuff</a>
+                        ::after
+                    </li>
+                </ul>
+                <blockquote class="summary">
+                    <p>Bla blabla</p>
+                    <p>Truc bidule chouette</p>
+                </blockquote>
+                <ul class="series">
+                    <li>
+                        Part
+                        <strong>2</strong>
+                        of
+                        <a href="/serie/25968"></a>
+                    </li>
+                </ul>
+                <dl class="stats">
+                    <dt class="language">Language:</dt>
+                    <dd class="language" lang="en">English</dd>
+                    <dt class="length">Words:</dt>
+                    <dd class="length">1503</dd>
+                    <dt class="chapters">Chapter::</dt>
+                    <dd class="language">10/?</dd>
+                </dl>
+            </li>
+           </ol>
+          </div>
+      </div>
+
+      <div id="footer" class="region"></div>
+    </div>
+
+    <script src="../js/search_result_elements_creation.js"></script>
+
+  </body>
+</html>
